@@ -6,6 +6,7 @@
     "@sindresorhus/slugify": "~0.8.0",
     "@supercharge/framework": "1.0.0-beta0.1",
     "boom": "~7.3.0",
+    "crumb": "~7.2.3",
     "hapi-dev-errors": "~3.2.3",
     "joi": "~14.3.1",
     "validator": "~10.11.0"
