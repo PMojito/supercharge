@@ -29,13 +29,15 @@ module.exports = {
    *
    */
   channels: {
+
     console: {
-      level: 'debug'
+      level: Env.get('LOG_LEVEL', 'debug')
     },
 
     file: {
-      level: 'debug',
+      level: Env.get('LOG_LEVEL', 'debug'),
       path: Helper.storagePath('logs', Env.get('LOG_FILE', 'app.log'))
     }
+
   }
 }

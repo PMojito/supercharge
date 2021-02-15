@@ -25,9 +25,12 @@ module.exports = {
    *
    */
   connections: {
+
     mongoose: {
+      url: Env.get('MONGODB_URL'),
       host: Env.get('MONGODB_HOST', 'localhost'),
       port: Env.get('MONGODB_PORT', 27017),
+      protocol: Env.get('MONGODB_PROTOCOL', 'mongodb'),
       database: Env.get('MONGODB_DATABASE', 'supercharge'),
       options: {
         // auth: {
@@ -36,8 +39,10 @@ module.exports = {
         // },
         useCreateIndex: true,
         useNewUrlParser: true,
-        useFindAndModify: false
+        useFindAndModify: false,
+        useUnifiedTopology: true
       }
     }
+
   }
 }
